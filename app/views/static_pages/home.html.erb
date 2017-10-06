@@ -1,11 +1,14 @@
 <% provide :title, 'Home' %>
-<h1>Sample App</h1>
-<p>
-  This is the home page for the
-  <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a>
-  sample application.
-  <br>
-  <%= link_to 'About', controller: 'static_pages', action: 'about' %>
-  <%= link_to 'Help', controller: 'static_pages', action: 'help' %>
-  <%= link_to 'Contacts', controller: 'static_pages', action: 'contacts' %>
-</p>
+<div class="center jumbotron">
+  <h1>Your personal software engineering team.</h1>
+
+  <h2>
+    Any project, any complexity, highest quality.
+  </h2>
+
+  <%= link_to "Contact us now!", contacts_path, class: "btn btn-lg btn-primary" %>
+
+  <h5>...or <%= link_to "sign up", signup_path %> to be up-to-date.</h5>
+</div>
+
+<%= link_to image_tag("rails.png", alt: "Rails logo"), 'http://rubyonrails.org/' %>
