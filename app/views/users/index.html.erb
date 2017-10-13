@@ -1,0 +1,8 @@
+<% provide :title, 'All users' %>
+
+<h1><%= yield(:title) %></h1>
+<ul>
+  <% User.all.each do |user| %>
+      <li><%= link_to user.name, user_path(user) %></li>
+  <% end %>
+</ul>
